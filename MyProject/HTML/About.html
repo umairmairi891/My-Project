@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <link rel="stylesheet" href="/BootStrap/bootstrap.css">
-    <link rel="stylesheet" href="/BootStrap/bootstrap.rtl.css">
+    <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
+    <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
     
-    <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="/MyProject/node_modules/animate.css/animate.css">
 
     <style>
         .mainside{
@@ -26,6 +26,10 @@
     z-index: 1000;
     display: none;
 }
+h2,h4,h6{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
 p{
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
@@ -41,7 +45,7 @@ p{
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand  me-5" href="#"> <img src="/Images/167707.png" style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span class="text-primary">M</span>S</a>
+            <a class="navbar-brand  me-5" href="#"> <img src="/MyProject/Images/167707.png" style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span class="text-primary">M</span>S</a>
             <button onclick="showbar()"  class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span style="margin-left: auto;" class="navbar-toggler-icon "></span>
             </button>
@@ -59,7 +63,7 @@ p{
     <div class="sidebar">
         <ul class="nav flex-column justify-content-center align-items-center animate__animated animate__bounceIn">
             <li class="nav-item text-end pe-3">
-                <img onclick="hidebar()" src="/Images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Close" style="cursor:pointer;">
+                <img onclick="hidebar()" src="/MyProject/Images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Close" style="cursor:pointer;">
             </li>
             <li class="nav-item "><a class="nav-link" href="Home.html">Home</a></li>
             <li class="nav-item "><a class="nav-link" href="About.html">About</a></li>
@@ -76,7 +80,7 @@ p{
 
 <h2 class="text-center">About Us</h2>
 
-<p>Welcome to our<strong> School Management System</strong>, a comprehensive School Management System designed to streamline and simplify the everyday operations of educational institutions. Our platform is built to support administrators, teachers, students, and parents by offering a centralized, efficient, and user-friendly interface for managing academic and administrative tasks.</p>
+<p class="">Welcome to our<strong> School Management System</strong>, a comprehensive School Management System designed to streamline and simplify the everyday operations of educational institutions. Our platform is built to support administrators, teachers, students, and parents by offering a centralized, efficient, and user-friendly interface for managing academic and administrative tasks.</p>
 
 <h4> Our Mission</h4>
 <p class="text-lg">To revolutionize the educational ecosystem by providing smart, digital solutions that enhance communication, increase efficiency, and improve the overall learning experience.</p>
@@ -93,7 +97,7 @@ p{
 <p>Our system is built with robust security protocols and can scale with the growing needs of institutions of all sizes.</p>
 
 <h4>Why Choose Us</h4>
-<p> User-Friendly Interface: Designed for users with minimal technical knowledge.
+<p class="lead"> User-Friendly Interface: Designed for users with minimal technical knowledge.
 Cloud-Based Access: Manage your school from anywhere, anytime.
 Customizable Modules: Tailor the system to fit the specific needs of your institution.
 24/7 Support: We provide reliable customer support and regular updates to ensure smooth operation.
@@ -107,7 +111,7 @@ Customizable Modules: Tailor the system to fit the specific needs of your instit
         </div>
     </div>
 </body>
-<script src="/JavaScript/Home.js">
-
+<script src="/MyProject/JavaScript/Home.js">
+    
 </script>
 </html>
