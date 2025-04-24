@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/BootStrap/bootstrap.css">
+    <link rel="stylesheet" href="/BootStrap/bootstrap.rtl.css">
+    
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
+
+    <style>
+        .mainside{
+    text-decoration: none;
+    list-style: none;
+}
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    padding-top: 70px;
+    z-index: 1000;
+    display: none;
+}
+p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+@media (max-width:500px) {
+    .sidebar{
+        width: 100%;
+    }
+   
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand  me-5" href="#"> <img src="/Images/167707.png" style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span class="text-primary">M</span>S</a>
+            <button onclick="showbar()"  class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span style="margin-left: auto;" class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse animate__animated animate__fadeIn" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item me-5"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="News.html">News</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="sidebar">
+        <ul class="nav flex-column justify-content-center align-items-center animate__animated animate__bounceIn">
+            <li class="nav-item text-end pe-3">
+                <img onclick="hidebar()" src="/Images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Close" style="cursor:pointer;">
+            </li>
+            <li class="nav-item "><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item "><a class="nav-link" href="About.html">About</a></li>
+            <li class="nav-item "><a class="nav-link" href="Contact.html">Contact</a></li>
+            <li class="nav-item "><a class="nav-link" href="News.html">News</a></li>
+        </ul>
+    </div>
+    
+
+    <div class="container">
+        <div class=" row mt-5 pt-5 ">
+            
+            
+
+<h2 class="text-center">About Us</h2>
+
+<p>Welcome to our<strong> School Management System</strong>, a comprehensive School Management System designed to streamline and simplify the everyday operations of educational institutions. Our platform is built to support administrators, teachers, students, and parents by offering a centralized, efficient, and user-friendly interface for managing academic and administrative tasks.</p>
+
+<h4> Our Mission</h4>
+<p class="text-lg">To revolutionize the educational ecosystem by providing smart, digital solutions that enhance communication, increase efficiency, and improve the overall learning experience.</p>
+
+<h4>What We Offer</h4>
+ <h6 class="text-dark">Student Management:</h6> <p>Easy tracking of student records, attendance, grades, and disciplinary actions.</p>
+<h6>Teacher Tools:</h6> <p> Tools for managing class schedules, uploading grades, communicating with students and parents, and organizing resources.</p>
+ 
+<h6>Parent Portal:</h6> 
+<p>Real-time access to student performance, attendance, announcements, and direct communication with teachers.</p>
+<h6>Administrative Control:</h6> 
+<p>Features for fee collection, staff payroll, inventory management, timetable creation, and detailed reporting.</p>
+<h6>Secure & Scalable:</h6> 
+<p>Our system is built with robust security protocols and can scale with the growing needs of institutions of all sizes.</p>
+
+<h4>Why Choose Us</h4>
+<p> User-Friendly Interface: Designed for users with minimal technical knowledge.
+Cloud-Based Access: Manage your school from anywhere, anytime.
+Customizable Modules: Tailor the system to fit the specific needs of your institution.
+24/7 Support: We provide reliable customer support and regular updates to ensure smooth operation.
+</p>
+
+<h4>Our Vision</h4>
+<p>To be a leading provider of digital solutions in education by empowering institutions to operate more efficiently and effectively through technology.</p>
+
+
+            
+        </div>
+    </div>
+</body>
+<script src="/JavaScript/Home.js">
+
+</script>
+</html>

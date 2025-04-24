@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/BootStrap/bootstrap.css">
+    <link rel="stylesheet" href="/BootStrap/bootstrap.rtl.css">
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
+    
+</head>
+<body>
+    <nav class="navbar active navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand  me-5" href="#"> <img src="/Images/167707.png" style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span class="text-primary">M</span>S</a>
+            <button onclick="showbar()"  class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span style="margin-left: auto;" class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse animate__animated animate__fadeIn" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item me-5"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="News.html">News</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="sidebar">
+        <ul class="nav flex-column justify-content-center align-items-center animate__animated animate__bounceIn">
+            <li class="nav-item text-end pe-3">
+                <img onclick="hidebar()" src="/Images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Close" style="cursor:pointer;">
+            </li>
+            <li class="nav-item "><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item "><a class="nav-link" href="About.html">About</a></li>
+            <li class="nav-item "><a class="nav-link" href="Contact.html">Contact</a></li>
+            <li class="nav-item "><a class="nav-link" href="News.html">News</a></li>
+        </ul>
+    </div>
+    
+    <div class="content h-100 container animate__animated animate__fadeIn  mt-7 px-4">
+        <div class="row m-auto">
+            <div class="col-md-4 mb-3">
+                <a href="/HTML/StudentTable.html">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Students</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="TeachersTable.html">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Teachers</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="/HTML/ClassesTable.html">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Classes</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="row text-center mt-5 ">
+                <div class="col-lg-6 mt-2 text-center">
+                    <h2 class="mt-2">Our Mission</h2>
+                    <p class="color">To revolutionize the educational ecosystem by providing smart, digital solutions that enhance communication, increase efficiency, and improve the overall learning experience.</p>
+
+                <h3>Our Goals</h3>
+                <p class="color">To be a leading provider of digital solutions in education by empowering institutions to operate more efficiently and effectively through technology.</p>
+            </div>
+            <div class=" offset-1 text-align-center align-items-center col-lg-3">
+                <img src="/Images/school.webp" alt="" style="margin-bottom: 0.6rem; width: 30rem;">
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cotainer bg-dark text-white  fixed-bottom">
+        <footer class="align-items-center justify-content-center mb-2">
+        <div class="row align-items-center mb-3">
+                <p class="pt-5 m">Copyright<span>&#169</span>2025</p>
+                <span>All Rights Reserved</span>
+
+                <div class="row justify-content-center align-items-center mt-5 ">
+                    <div class="col-1 ml-n3">
+                        <a href="https//:www.google.com"><img src="/Images/985_google_g_icon.jpg" alt="" width="30px" style="border-radius: 4px;" ></a>
+                    </div>
+                    <div class="col-1">
+                        <a href="https//:www.facebook.com" target="_blank"><img src="/Images/facebook-logo-facebook-icon-transparent-free-png.png" alt="" width="40px" height="40px"></a>
+                    </div>
+                    <div class="col-1">
+                        <a href="https//:www.youtube.com"><img src="/Images/youtube-logo-youtube-icon-transparent-free-png.png" alt="" width="40px" height="40px"></a>
+                    </div>
+                    <div class="col-1">
+                        <a href="https//:www.twitter.com"><img src="/Images/logo-6743776_1280.png" alt="" width="30px" style="border-radius: 8px;"></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="/JavaScript/Home.js"></script>
+</html>

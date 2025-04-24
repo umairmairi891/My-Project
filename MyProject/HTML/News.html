@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/BootStrap/bootstrap.css">
+    <link rel="stylesheet" href="/BootStrap/bootstrap.rtl.css">
+
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
+    <style>
+        
+        .mainside{
+    text-decoration: none;
+    list-style: none;
+}
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    padding-top: 70px;
+    z-index: 1000;
+    display: none;
+}
+img{
+    opacity: 0.5 ;
+}
+.img{
+position: relative;
+}
+.img h1{
+    position: absolute;
+    top: 0;
+}
+.img p{
+    position: absolute;
+    top: 10rem;
+    font-weight: 500;
+}
+
+@media (max-width:500px) {
+    .sidebar{
+        width: 100%;
+    }
+   .img img{
+        height: 70vh;
+    }
+   .img p{
+    top: 2rem;
+   }
+   .last img{
+    height: 100vh;
+   }
+   .last p{
+    top: 1rem;
+    font-size: 15px;
+   }
+}
+@media (max-width:770px) {
+    
+   .img img{
+        height: 70vh;
+    }
+   .img p{
+    top: 1rem;
+   }
+   .last img{
+    height: 100vh;
+   }
+   .last p{
+    top: 1rem;
+    font-size: 15px;
+   }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand  me-5" href="#"> <img src="/Images/167707.png" style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span class="text-primary">M</span>S</a>
+            <button onclick="showbar()"  class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span style="margin-left: auto;" class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse animate__animated animate__fadeIn" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item me-5"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="News.html">News</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="sidebar">
+        <ul class="nav flex-column justify-content-center align-items-center animate__animated animate__bounceIn">
+            <li class="nav-item text-end pe-3">
+                <img onclick="hidebar()" src="/Images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Close" style="cursor:pointer;">
+            </li>
+            <li class="nav-item "><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item "><a class="nav-link" href="About.html">About</a></li>
+            <li class="nav-item "><a class="nav-link" href="Contact.html">Contact</a></li>
+            <li class="nav-item "><a class="nav-link" href="News.html">News</a></li>
+        </ul>
+    </div>
+    <div class="container pt-5 mt-5">
+        <div class="row text-center bg-light">
+            <h2>Our Latest News</h2>
+        </div>
+        <div class="row mt-5 img">
+            <img src="/Images/20231010_SchoolEnrollment_shutterstock_776289724-e1697045550385.webp" alt="" >
+            <h1 class="text-center">Hello</h1>
+            <p class="img p-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium! Commodi, atque suscipit. Voluptate officiis voluptates nisi velit tenetur libero facilis quaerat rem, omnis repellat ad ipsum est dicta sint aut culpa laboriosam quo dolores. Accusamus.</p>
+        </div>
+        <div class="row mt-5  img">
+            <img src="/Images/7e418ba4bb7340b5b79d3004e0918e2e.webp" alt="" style="opacity: 0.3; height: 70vh;">
+            <h1 class="text-center">Hello</h1>
+            <p class="img p-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium! Commodi, atque suscipit. Voluptate officiis voluptates nisi velit tenetur libero facilis quaerat rem, omnis repellat ad ipsum est dicta sint aut culpa laboriosam quo dolores. Accusamus.</p>
+        </div>
+        <div class="row mt-5 img last">
+            <img src="/Images/academic-1.jpg" alt="" >
+            <h1 class="text-center">Hello</h1>
+            <p class="img p-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium! Commodi, atque suscipit. Voluptate officiis voluetur velit in? Quidem minus in rem blanditiis tempora harum consequuntur aspernatur fugiat reprehenderit non, nobis distinctio soluta architecto saepe consectetur, quae similique deserunt, cupiditate asperiores laborum natus. Ea id doloremque autem sed ullam molestiae quidem similique in odio dicta?</p>
+        </div>
+        <div class="row mt-5 img last">
+            <img src="/Images/images.jpeg" alt="" >
+            <h1 class="text-center">Hello</h1>
+            <p class="img p-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium! Commodi, atque suscipit. Voluptate officiis voluptates nisi velit tenetur libero facilis quaerat rem, omnis repellat ad ipsum est dicta sint aut culpa laboriosam quo dolores. Accusamus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quaerat consectetur velit in? Quidem minus in rem blanditiis tempora harum consequuntur aspernatur fugiat reprehenderit non, nobis distinctio soluta architecto saepe consectetur, quae similique deserunt, cupiditate asperiores laborum natus. Ea id doloremque autem sed ullam molestiae quidem similique in odio dicta?</p>
+        </div>
+    </div>
+    
+</body>
+<script src="/JavaScript/Home.js"></script>
+</html>

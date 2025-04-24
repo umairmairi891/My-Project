@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/BootStrap/bootstrap.css">
+    <link rel="stylesheet" href="/BootStrap/bootstrap.rtl.css">
+
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
+    <style>
+        .mainside{
+    text-decoration: none;
+    list-style: none;
+}
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    padding-top: 70px;
+    z-index: 1000;
+    display: none;
+}
+.form{
+    margin-top: 5rem;
+}
+@media (max-width:500px) {
+    .sidebar{
+        width: 100%;
+    } 
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand  me-5" href="#"> <img src="/Images/167707.png" style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span class="text-primary">M</span>S</a>
+            <button onclick="showbar()"   class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span style="margin-left: auto;" class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse animate__animated animate__fadeIn" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item me-5"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="News.html">News</a></li>
+                </ul>
+                <img onclick="showbar()" src="/Images/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu" style="margin-left: auto; cursor: pointer;">
+            </div>
+        </div>
+    </nav>
+    
+    <div class="sidebar">
+        <ul class="nav flex-column justify-content-center align-items-center animate__animated animate__bounceIn">
+            <li class="nav-item text-end pe-3">
+                <img onclick="hidebar()" src="/Images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Close" style="cursor:pointer;">
+            </li>
+            <li class="nav-item "><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item "><a class="nav-link" href="About.html">About</a></li>
+            <li class="nav-item "><a class="nav-link" href="Contact.html">Contact</a></li>
+            <li class="nav-item "><a class="nav-link" href="News.html">News</a></li>
+        </ul>
+    </div>
+   
+<div class="container py-5 form">
+    
+    <div class="row mb-4">
+      <div class="col text-center">
+        <h2>Contact Us</h2>
+      </div>
+    </div>
+  
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 bg-light p-4 rounded shadow">
+        <form action="mailto:umairmairi89@gmail.com" method="POST" enctype="text/plain">
+          <div class="mb-3 text-center">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="Name" required>
+          </div>
+  
+          <div class="mb-3 text-center">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="Email" required>
+          </div>
+  
+          <div class="mb-3 text-center">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="Description" rows="5" required></textarea>
+          </div>
+  
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary w-50">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/JavaScript/Home.js"></script>
+</html>
