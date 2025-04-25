@@ -41,7 +41,19 @@ position: relative;
     top: 10rem;
     font-weight: 500;
 }
-
+.news-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .news-item {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 40px;
+    }
 @media (max-width:500px) {
     .sidebar{
         width: 100%;
@@ -108,30 +120,54 @@ position: relative;
         </ul>
     </div>
     <div class="container pt-5 mt-5">
-        <div class="row text-center bg-light">
-            <h2>Our Latest News</h2>
+        
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="fw-bold">Our Latest News</h2>
+          </div>
         </div>
-        <div class="row mt-5 img">
-            <img src="/MyProject/Images/20231010_SchoolEnrollment_shutterstock_776289724-e1697045550385.webp" alt="" >
-            <h1 class="text-center">Hello</h1>
-            <p class="img p-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium! Commodi, atque suscipit. Voluptate officiis voluptates nisi velit tenetur libero facilis quaerat rem, omnis repellat ad ipsum est dicta sint aut culpa laboriosam quo dolores. Accusamus.</p>
+      
+        <div class="row news-item">
+          <div class="col-md-6">
+            <img src="/MyProject/Images/20231010_SchoolEnrollment_shutterstock_776289724-e1697045550385.webp" alt="News Image 1" class="news-img">
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h3 class="text-center">Hello</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium...</p>
+          </div>
         </div>
-        <div class="row mt-5  img">
-            <img src="/MyProject/Images/7e418ba4bb7340b5b79d3004e0918e2e.webp" alt="" style="opacity: 0.3; height: 70vh;">
-            <h1 class="text-center">Hello</h1>
-            <p class="img p-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium! Commodi, atque suscipit. Voluptate officiis voluptates nisi velit tenetur libero facilis quaerat rem, omnis repellat ad ipsum est dicta sint aut culpa laboriosam quo dolores. Accusamus.</p>
+      
+        <div class="row news-item">
+          <div class="col-md-6 order-md-2">
+            <img src="/MyProject/Images/7e418ba4bb7340b5b79d3004e0918e2e.webp" alt="News Image 2" class="news-img" style="opacity: 0.3; height: 100%;">
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h3 class="text-center">Hello</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium...</p>
+          </div>
         </div>
-        <div class="row mt-5 img last">
-            <img src="/MyProject/Images/academic-1.jpg" alt="" >
-            <h1 class="text-center">Hello</h1>
-            <p class="img p-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium! Commodi, atque suscipit. Voluptate officiis voluetur velit in? Quidem minus in rem blanditiis tempora harum consequuntur aspernatur fugiat reprehenderit non, nobis distinctio soluta architecto saepe consectetur, quae similique deserunt, cupiditate asperiores laborum natus. Ea id doloremque autem sed ullam molestiae quidem similique in odio dicta?</p>
+      
+        <div class="row news-item">
+          <div class="col-md-6">
+            <img src="/MyProject/Images/academic-1.jpg" alt="News Image 3" class="news-img">
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h3 class="text-center">Hello</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium... Cupiditate asperiores laborum natus.</p>
+          </div>
         </div>
-        <div class="row mt-5 img last">
-            <img src="/MyProject/Images/images.jpeg" alt="" >
-            <h1 class="text-center">Hello</h1>
-            <p class="img p-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit laboriosam quae iusto laborum laudantium! Commodi, atque suscipit. Voluptate officiis voluptates nisi velit tenetur libero facilis quaerat rem, omnis repellat ad ipsum est dicta sint aut culpa laboriosam quo dolores. Accusamus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quaerat consectetur velit in? Quidem minus in rem blanditiis tempora harum consequuntur aspernatur fugiat reprehenderit non, nobis distinctio soluta architecto saepe consectetur, quae similique deserunt, cupiditate asperiores laborum natus. Ea id doloremque autem sed ullam molestiae quidem similique in odio dicta?</p>
+      
+        <div class="row news-item">
+          <div class="col-md-6 order-md-2">
+            <img src="/MyProject/Images/images.jpeg" alt="News Image 4" class="news-img">
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h3 class="text-center">Hello</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, atque suscipit... similique in odio dicta?</p>
+          </div>
         </div>
-    </div>
+      </div>
+      
     
 </body>
 <script src="/JavaScript/Home.js"></script>
