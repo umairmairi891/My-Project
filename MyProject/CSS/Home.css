@@ -13,12 +13,17 @@
     z-index: 1000;
     display: none;
 }
-
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
 .content {
     margin-right: 250px; /* Leave space for sidebar */
     margin-top: 100px;
 }
-
+.content img{
+    width: 100%;
+    height: 50%;
+}
 .card a {
     color: inherit;
     text-decoration: none;
@@ -58,6 +63,12 @@ footer{
     width: 40rem;
     border-radius: 10px;
 }
+.img:hover{
+    
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
 /* footer img{
     aspect-ratio: 16/10;
 } */
@@ -76,6 +87,6 @@ footer{
 }
 @media (max-width:700px){
     .content img{
-        width: 180px;
+        width: 30rem;
     }
 }

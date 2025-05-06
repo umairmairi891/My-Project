@@ -1,122 +1,42 @@
+<!-- Student.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
-    <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
-    <link rel="stylesheet" href="StudentTable.html">
-    <style>
-        img{
-            width: 30px;
-        }
-        button a{
-            text-decoration: none;
-            color: whitesmoke;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Student Form</title>
+  <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
+  <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    @media (max-width:500px) {
+    form input{
+      padding: 10px;
+    }
+    }
+  </style>
 </head>
-<body style="text-align: center;">
+
+<body class="bg-light">
+  <div class="container col-lg-4 py-4">
+    <h2 class="text-center mb-4">Add New Student</h2>
+    <form id="studentForm" class="text-center card w-10  p-4">
+      <input type="text" id="fname" placeholder="First Name" class="form-control  mb-4" required>
+      <input type="text" id="sname" placeholder="Second Name" class="form-control mb-4" required>
+      <input type="number" id="age" placeholder="Age" class="form-control mb-4" required>
+      <input type="text" id="class" placeholder="Class" class="form-control mb-4" required>
+      <input type="email" id="email" placeholder="Email" class="form-control mb-4" required>
+      <button type="submit" class="btn btn-primary ">Add Student</button>
+    </form>
+    <div class="text-center w-10 mt-3">
+      <a href="StudentTable.html" class="btn btn-success ">Go to Student Table</a>
+    </div>
+  </div>
+
+  <script src="/MyProject/JavaScript/Student.js">
     
-<div class="container bg-secondary text-white py-4 px-3 rounded">
-    
-    <div class="row   mb-3">
- <div class="col-md-1  mt-2">
-    <a href="index.html"> <img src="/MyProject/Images/arrow-left-circle-fill.svg" alt="" width="40"></a>
- </div>
-        <div class="col-md-8  me-5">
-            <h1 class="text-center">This is Student Portal</h1>
-        </div>
-        <div class="col-md-2 text-center ">
-            <button class="btn btn-danger"><a href="StudentTable.html">Student Table</a></button>
-        </div>
-    </div>
-
-    <div class="row mb-4">
-        <div class="col align-items-center justify-content-center bg-light text-dark p-3 rounded">
-            <p>
-                This is a Student Controlling Portal. Everyone can add new Student data From Here easily
-            </p>
-        </div>
-    </div>
-
-    <div class="row mb-4">
-        <div class="col-lg-4 mx-auto bg-light text-dark p-4 rounded shadow">
-            <form>
-                <div class="mb-3">
-                    <label for="fname" class="form-label">First Name</label>
-                    <input type="text" class="form-control" name="fname" id="fname" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="sname" class="form-label">Second Name</label>
-                    <input type="text" class="form-control" name="sname" id="sname" required>
-                </div>
-              <div class="mb-3">
-                    <label for="email" class="form-label">Age</label>
-                    <input type="number" class="form-control" name="age" id="age" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="class" class="form-label">Class</label>
-                    <input type="text" class="form-control" name="class" id="class" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-
-                <div class="text-center">
-                    <button onclick="addData()" type="submit" class="btn btn-primary w-30">Add a New Student</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="row">
-        
-    </div>
-</div>
+  </script>
 </body>
-<script src="/MyProject/JavaScript/Student.js">
-
-
-function addData() {
-  const fname = document.querySelector('#fname')?.value;
-  const sname = document.querySelector('#sname')?.value;
-  const age = document.querySelector('#age')?.value;
-  const studentClass = document.querySelector('#class')?.value;
-  const email = document.querySelector('#email')?.value;
-
-  
-
-  const table = document.querySelector('.StudentTable tbody');
-  if (!table) {
-    console.error("Table not found! Make sure it's loaded and accessible in the DOM.");
-    return;
-  }
-
-  const row = document.createElement('tr');
-
-  [fname, sname, age, studentClass, email].forEach(val => {
-    const td = document.createElement('td');
-    td.textContent = val;
-    row.appendChild(td);
-  });
-
-  table.appendChild(row);
-
-  document.querySelector('#fname').value = '';
-  document.querySelector('#sname').value = '';
-  document.querySelector('#age').value = '';
-  document.querySelector('#class').value = '';
-  document.querySelector('#email').value = '';
-}
-
-
-
-</script>
 </html>

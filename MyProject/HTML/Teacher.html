@@ -15,13 +15,12 @@
 </head>
 <body>
     
-<iframe src="StudentTable.html" frameborder="0"></iframe>
     
     <div class="container bg-light py-5 px-4 rounded">
     
         <div class="row  d-flex   mb-3">
           <div class="col-1 mt-2">
-            <a href="Home.html"> <img src="/MyProject/Images/arrow-left-circle-fill.svg" alt="" ></a>
+            <a href="/MyProject/HTML/index.html"> <img src="/MyProject/Images/arrow-left-circle-fill.svg" alt="" ></a>
          </div>
           <div class="col-10  text-center">
             <h2>Teachers Section</h2>
@@ -36,7 +35,7 @@
       
         <div class="row justify-content-center">
           <div class="col-md-8 col-lg-6 bg-success text-white p-4 rounded shadow">
-            <form>
+            <form id="teacherForm">
               <div class="mb-3 text-center">
                 <label for="className" class="form-label">Name</label>
                 <input type="text" class="form-control" id="Name" placeholder="Enter Name" required>
@@ -57,7 +56,27 @@
               </div>
             </form>
           </div>
+          <div class="text-center w-10 mt-3">
+            <a href="TeachersTable.html" class="btn btn-secondary ">Go to Teachers  Table</a>
+          </div>
         </div>
       </div>
 </body>
+<script>
+  document.getElementById("teacherForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const teacher = {
+            name: document.getElementById("Name").value,
+            education: document.getElementById("Education").value,
+            experience: document.getElementById("Experience").value
+        };
+
+        let teachers = JSON.parse(localStorage.getItem("teachers")) || [];
+        teachers.push(teacher);
+        localStorage.setItem("teachers", JSON.stringify(teachers));
+
+        alert("Teacher added successfully!");
+        this.reset();
+    });
+</script>
 </html>
