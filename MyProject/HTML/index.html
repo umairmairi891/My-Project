@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,21 @@
     <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
     <link rel="stylesheet" href="/MyProject/CSS/Home.css">
     <link rel="stylesheet" href="/MyProject/node_modules/animate.css/animate.css">
-    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script> -->
 </head>
+
 <body>
     <nav class="navbar  navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand  me-5" href="#"> <img src="/MyProject/Images/167707.png" style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span class="text-primary">M</span>S</a>
-            <button onclick="showbar()"  class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <a class="navbar-brand  me-5" href="#"> <img src="/MyProject/Images/167707.png"
+                    style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span
+                    class="text-primary">M</span>S</a>
+            <button onclick="showbar()" class="navbar-toggler me-5" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
                 <span style="margin-left: auto;" class="navbar-toggler-icon "></span>
             </button>
             <div class="collapse navbar-collapse animate__animated animate__fadeIn d-4" id="mainNavbar">
@@ -27,11 +36,12 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="sidebar">
         <ul class="nav flex-column justify-content-center align-items-center animate__animated animate__bounceIn">
             <li class="nav-item text-end pe-3">
-                <img onclick="hidebar()" src="/MyProject/Images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Close" style="cursor:pointer;">
+                <img onclick="hidebar()" src="/MyProject/Images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="Close" style="cursor:pointer;">
             </li>
             <li class="nav-item "><a class="nav-link active" href="#">Home</a></li>
             <li class="nav-item "><a class="nav-link active" href="About.html">About</a></li>
@@ -39,32 +49,53 @@
             <li class="nav-item "><a class="nav-link active" href="News.html">News</a></li>
         </ul>
     </div>
-    
+
     <div class="content h-100 container animate__animated animate__fadeIn  mt-7 px-4">
-        <div class="row">
-            <div class="col-md-12 mb-5 position-relative">
+        <div class="row mb-4 ">
+            <div class="col ">
+                <div class="fw-bold">
+                    <div class="slider-container">
+                        <div class="slider-text fs-5 text-dark">
+                             <span class="slider">Welcome to our Student Portal!</span>       
+                             <span class="slider"> Admissions open for 2025! |</span>     
+                             <span class="slider">  New scholarshipsavailable!</span>   
+                             <span class="slider">  Register Now!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-12 mb-3 position-relative">
                 <!-- Image with reduced opacity and controlled height -->
-                <img src="/MyProject/Images/SchoolPage.jpg" alt="" class="img-fluid w-100" style="opacity: 0.2; height: 70vh; object-fit: cover;">
-        
+                <img src="/MyProject/Images/SchoolPage.jpg" alt="" class="img-fluid w-100"
+                    style="opacity: 0.2; height: 70vh; object-fit: cover;">
+
                 <!-- Centered Text overlay INSIDE the image -->
-                <div class="position-absolute text-capitalize top-50 start-0 translate-middle-y text-center text-dark px-3">
+                <div
+                    class="position-absolute text-capitalize top-50 start-0 translate-middle-y text-center text-dark px-3">
                     <h2 class="mt-2 fw-bold ">Our Mission</h2>
-                    <p class="lead fs-4 fw-normal d-flex-inline flex-column text-bold align-items-center  user-select-all">
-                        To revolutionize the educational ecosystem by providing smart, digital solutions that enhance communication,
+                    <p
+                        class="lead fs-4 fw-normal d-flex-inline flex-column text-bold align-items-center  user-select-all">
+                        To revolutionize the educational ecosystem by providing smart, digital solutions that
+                        enhance
+                        communication,
                         increase efficiency, and improve the overall learning experience.
                     </p>
-        
+
                     <h3 class="mt-4 fw-bold">Our Goals</h3>
                     <p class="lead fs-4  user-select-all">
-                        To be a leading provider of digital solutions in education by empowering institutions to operate more efficiently
+                        To be a leading provider of digital solutions in education by empowering institutions to
+                        operate
+                        more efficiently
                         and effectively through technology.
                     </p>
                 </div>
             </div>
         </div>
-        
-        
-        
+
+
+
         <div class="row m-auto">
             <div class="col-md-4 mb-3">
                 <a href="/MyProject/HTML/StudentTable.html">
@@ -93,37 +124,42 @@
                     </div>
                 </a>
             </div>
-            
+
         </div>
     </div>
     <footer class="bg-dark  text-white ">
         <div class="container py-3">
-          <div class="row text-center">
-            <div class="col-12 mb-2">
-              <p class="mb-0">Copyright &copy; 2025</p>
-              <small>All Rights Reserved</small>
+            <div class="row text-center">
+                <div class="col-12 mb-2">
+                    <p class="mb-0">Copyright &copy; 2025</p>
+                    <small>All Rights Reserved</small>
+                </div>
+
+                <div class="col-12 ">
+                    <div class="d-flex justify-content-center align-items-center gap-3 mt-2">
+                        <a href="https://www.google.com" target="_blank">
+                            <img src="/MyProject/Images/google-logo-icon.png" alt="Google" width="30" class="rounded">
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="/MyProject/Images/facebook-logo-facebook-icon-transparent-free-png.png"
+                                alt="Facebook" width="40" height="40">
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="/MyProject/Images/youtube-logo-youtube-icon-transparent-free-png.png"
+                                alt="YouTube" width="40" height="40">
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank">
+                            <img src="/MyProject/Images/Twitter-Logo.png" alt="Twitter" width="30" class="rounded">
+                        </a>
+                    </div>
+                </div>
             </div>
-      
-            <div class="col-12 ">
-              <div class="d-flex justify-content-center align-items-center gap-3 mt-2">
-                <a href="https://www.google.com" target="_blank">
-                  <img src="/MyProject/Images/google-logo-icon.png" alt="Google" width="30" class="rounded">
-                </a>
-                <a href="https://www.facebook.com" target="_blank">
-                  <img src="/MyProject/Images/facebook-logo-facebook-icon-transparent-free-png.png" alt="Facebook" width="40" height="40">
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                  <img src="/MyProject/Images/youtube-logo-youtube-icon-transparent-free-png.png" alt="YouTube" width="40" height="40">
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                  <img src="/MyProject/Images/Twitter-Logo.png" alt="Twitter" width="30" class="rounded">
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </footer>
+    </footer>
     </div>
 </body>
-<script src="/MyProject/JavaScript/Home.js"></script>
+<script src="/MyProject/JavaScript/Home.js">
+
+</script>
+
 </html>

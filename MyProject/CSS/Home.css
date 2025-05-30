@@ -69,9 +69,36 @@ footer{
     transition: transform 0.2s ease-in-out;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
-/* footer img{
-    aspect-ratio: 16/10;
-} */
+.slider-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: transparent;
+    /* border: 1px solid #dee2e6; */
+    padding: 10px 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .slider-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: slideText 20s linear infinite;
+  }
+.slider{
+    display: inline-block;
+    margin-right: 4rem;
+}
+.slider-container:hover .slider-text{
+    animation-play-state: paused;
+}
+  @keyframes slideText {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 @media (max-width:500px) {
     .sidebar{
         width: 100%;

@@ -5,9 +5,32 @@
   <meta charset="UTF-8">
   <title>Student Table</title>
   <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
+  <style>
+    .details-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1050;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+.details-sidebar.show {
+  right: 0;
+}
+@media (max-width:500px) {
+  .details-sidebar{
+    width: 100%;
+  }
+}
+
+  </style>
 </head>
 <body class="bg-light">
-  <div class="container py-5">
+  <div class="container py-5 ">
+    
     <div class="row align-items-center ">
       <div class="col-md-4 ">
         <a href="/MyProject/HTML/index.html"><img src="/MyProject/Images/arrow-left-circle-fill.svg" alt="Back" width="40" height="20px"></a>
@@ -17,7 +40,7 @@
       <a href="Student.html" class="btn btn-primary ">Add New Student</a>
     </div>
     </div>
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped overflow-visible">
       <thead class="table-dark">
         <tr>
           <th>First Name</th>
@@ -25,15 +48,57 @@
           <th>Age</th>
           <th>Class</th>
           <th>Email</th>
-          <th>Actions</th>
+          <th class="width-30">Actions</th>
         </tr>
       </thead>
       <tbody id="studentTableBody"></tbody>
     </table>
-    
   </div>
+  
+<div id="detailsSidebar" class="details-sidebar bg-secondary border-start p-4">
+  <button class="btn-close float-end " onclick="closeSidebar()"></button>
+  <h4 class="mt-4">Student Details</h4>
+  <form id="detailsForm">
+    <div class="mb-2">
+      <label>First Name</label>
+      <input type="text" id="detailFname" class="form-control" readonly>
+    </div>
+    <div class="mb-2">
+      <label>Second Name</label>
+      <input type="text" id="detailSname" class="form-control" readonly>
+    </div>
+    <div class="mb-2">
+      <label>Age</label>
+      <input type="number" id="detailAge" class="form-control" readonly>
+    </div>
+    <div class="mb-2">
+      <label>Class</label>
+      <input type="text" id="detailClass" class="form-control" readonly>
+    </div>
+    <div class="mb-2">
+      <label>Email</label>
+      <input type="email" id="detailEmail" class="form-control" readonly>
+    </div>
+    <div class="mb-2">
+      <label>Marks</label>
+      <input type="number" id="detailMarks" class="form-control" readonly>
+    </div>
+    <div class="mb-2">
+      <label>Attendance (%)</label>
+      <input type="number" id="detailAttendance" class="form-control" readonly>
+    </div>
+    <div class="mb-2">
+      <label>Grade</label>
+      <input type="text" id="detailGrade" class="form-control" readonly>
+    </div>
+    <button class="btn btn-primary mt-3 " onclick="saveChanges()">Save Changes</button>
+  </form>
+</div>
+
+
 
   <script src="/MyProject/JavaScript/Student.js">
+    
   </script>
 </body>
 </html>
