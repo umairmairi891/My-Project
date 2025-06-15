@@ -1,119 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
-    <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
-</head>
-<body>
-    <div class="container py-4">
 
-        <div class="row align-items-center mb-4">
-          <div class="col-auto">
-            <a href="index.html">
-              <img src="/MyProject/Images/arrow-left-circle-fill.svg" alt="Back" width="32">
-            </a>
-          </div>
-          <div class="col text-center">
-            <h2 class="mb-0">Teachers Table</h2>
-          </div>
-          <div class="col-auto text-end">
-            <a href="Teacher.html" class="btn btn-primary">Add New Teacher</a>
-          </div>
-        </div>
-      
-        <div class="row">
-          <div class="col">
-            <div class="table-responsive">
-              <table class="table table-striped table-bordered">
-                <thead class="table-dark text-center">
-                  <tr>
-                    <th>Name</th>
-                    <th>Education</th>
-                    <th>Experience</th>
-                    <th>Operation</th>
-                  </tr>
-                </thead>
-                <tbody id="teacherTableBody">
-                  <tr>
-                    <td>Ali</td>
-                    <td>BS IT</td>
-                    <td>3 Years</td>
-                    
-                    <td>
-                      <button class="btn  btn-sm btn-warning">Edit</button>
-                      <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
+  <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
+</head>
+
+<body>
+  <div class="container py-4">
+
+    <div class="row align-items-center mb-4">
+      <div class="col-auto">
+        <a href="index.html">
+          <img src="/MyProject/Images/arrow-left-circle-fill.svg" alt="Back" width="32">
+        </a>
+      </div>
+      <div class="col text-center">
+        <h2 class="mb-0">Teachers Table</h2>
+      </div>
+      <div class="col-auto text-end">
+        <a href="Teacher.html" class="btn btn-primary">Add New Teacher</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead class="table-dark text-center">
+              <tr>
+                <th>Name</th>
+                <th>Education</th>
+                <th>Experience</th>
+                <th>Operation</th>
+              </tr>
+            </thead>
+            <tbody id="teacherTableBody">
+              <tr>
+                <td>Ali</td>
+                <td>BS IT</td>
+                <td>3 Years</td>
+
+                <td>
+                  <button class="btn  btn-sm btn-warning">Edit</button>
+                  <button class="btn btn-sm btn-danger">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
+    </div>
+
+  </div>
 </body>
 <script>
   let teachers = JSON.parse(localStorage.getItem("teachers")) || [];
-    const tableBody = document.getElementById("teacherTableBody");
+  const tableBody = document.getElementById("teacherTableBody");
 
-    function renderTable() {
-        tableBody.innerHTML = "";
-        teachers.forEach((teacher, index) => {
-            const row = `
+  function renderTable() {
+    tableBody.innerHTML = "";
+    teachers.forEach((teacher, index) => {
+      const row = `
                 <tr>
                     <td>${teacher.name}</td>
                     <td>${teacher.education}</td>
                     <td>${teacher.experience}</td>
                     <td>
-                        <button class="btn btn-warning btn-sm me-2" onclick="editTeacher(${index})">Edit</button>
-                        <button class="btn btn-danger btn-sm" onclick="deleteTeacher(${index})">Delete</button>
+                        <button class="btn btn-warning btn-sm me-md-4  " onclick="editTeacher(${index})">Edit</button>
+                        <button class="btn btn-danger btn-sm mt-1 me-md-4 text-center" onclick="deleteTeacher(${index})">Delete</button>
+                        <button data-bs-toggle='button' class="btn btn-danger  bg-danger btn-sm mt-1 me-md-4 " onclick="toggleSchedule('${teacher.name}')">schedule</button>
+                     
                     </td>
                 </tr>`;
-            tableBody.innerHTML += row;
+      tableBody.innerHTML += row;
+    });
+  }
+
+let currentVisibleTeacher = null;
+
+function toggleSchedule(teacherName) {
+  if (currentVisibleTeacher === teacherName) {
+    document.getElementById("scheduleContainer").innerHTML = "";
+    currentVisibleTeacher = null;
+  } else {
+    showScheduleTable(teacherName); 
+    currentVisibleTeacher = teacherName;
+  }
+}
+
+
+
+  function deleteTeacher(index) {
+    if (confirm("Are you sure you want to delete this teacher?")) {
+      teachers.splice(index, 1);
+      localStorage.setItem("teachers", JSON.stringify(teachers));
+      renderTable();
+      const countDisplay = document.getElementById("teacherCount");
+      if (countDisplay) {
+        countDisplay.textContent = teachers.length;
+      }
+    }
+  }
+
+  function editTeacher(index) {
+    const teacher = teachers[index];
+
+    alert(
+      `Current Info:\n` +
+      `Name: ${teacher.name}\n` +
+      `Education: ${teacher.education}\n` +
+      `Experience: ${teacher.experience}`
+    );
+
+    const newName = prompt("Edit Name:", teacher.name);
+    const newEducation = prompt("Edit Education:", teacher.education);
+    const newExperience = prompt("Edit Experience:", teacher.experience);
+
+    if (newName && newEducation && newExperience) {
+      teachers[index] = {
+        name: newName,
+        education: newEducation,
+        experience: newExperience
+      };
+      localStorage.setItem("teachers", JSON.stringify(teachers));
+      renderTable();
+      alert("Teacher updated successfully!");
+    } else {
+      alert("Edit cancelled or invalid input.");
+    }
+  }
+
+  const teacherSchedules = {
+    "umair": [
+      { day: "Monday", time: "9:00 AM", subject: "Mathematics", class: "9A" },
+      { day: "Wednesday", time: "11:00 AM", subject: "Geometry", class: "10B" }
+    ],
+    "Ali": [
+      { day: "Tuesday", time: "10:00 AM", subject: "English Literature", class: "9B" },
+      { day: "Thursday", time: "2:00 PM", subject: "Writing Skills", class: "10A" }
+    ],
+    "Ahmed Raza": [
+      { day: "Monday", time: "8:00 AM", subject: "Physics", class: "11C" },
+      { day: "Wednesday", time: "10:00 AM", subject: "Electronics", class: "12B" }
+    ]
+  };
+function hide(){
+  const container=document.getElementById('scheduleContainer');
+  container.style.display='none';
+}
+  const scheduleContainer = document.createElement("div");
+  scheduleContainer.id = "scheduleContainer";
+  scheduleContainer.className = "mt-4";
+  document.body.appendChild(scheduleContainer);
+
+  // Attach Schedule button handlers
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("button");
+
+    buttons.forEach(button => {
+      if (button.textContent.trim().toLowerCase() === "schedule") {
+        button.addEventListener("click", function () {
+          const teacherName = this.closest("tr").querySelector("td").textContent.trim();
+          showScheduleTable(teacherName);
         });
+      }
+    });
+  });
+
+  function showScheduleTable(teacherName) {
+    const schedule = teacherSchedules[teacherName] || [];
+    const container = document.getElementById("scheduleContainer");
+
+    if (schedule.length === 0) {
+      container.innerHTML = `<h5 class="text-center text-muted">No schedule found for ${teacherName}</h5>`;
+      return;
     }
 
-    function deleteTeacher(index) {
-        if (confirm("Are you sure you want to delete this teacher?")) {
-            teachers.splice(index, 1);
-            localStorage.setItem("teachers", JSON.stringify(teachers));
-            renderTable();
-        }
-    }
+    let html = `
+    <h4 class="text-center mb-3">${teacherName}'s Schedule</h4>
+    <table class="table table-bordered table-striped w-75 mx-auto">
+      <thead class='table-dark'>
+        <tr>
+          <th>#</th>
+          <th>Day</th>
+          <th>Time</th>
+          <th>Subject</th>
+          <th>Class</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
 
-    function editTeacher(index) {
-        const teacher = teachers[index];
+    schedule.forEach((item, idx) => {
+      html += `
+      <tr>
+        <td>${idx + 1}</td>
+        <td>${item.day}</td>
+        <td>${item.time}</td>
+        <td>${item.subject}</td>
+        <td>${item.class}</td>
+      </tr>`;
+    });
 
-        // Show current data
-        alert(
-            `Current Info:\n` +
-            `Name: ${teacher.name}\n` +
-            `Education: ${teacher.education}\n` +
-            `Experience: ${teacher.experience}`
-        );
+    html += "</tbody></table>";
+    container.innerHTML = html;
+  }
 
-        // Prompt for new data
-        const newName = prompt("Edit Name:", teacher.name);
-        const newEducation = prompt("Edit Education:", teacher.education);
-        const newExperience = prompt("Edit Experience:", teacher.experience);
 
-        if (newName && newEducation && newExperience) {
-            teachers[index] = {
-                name: newName,
-                education: newEducation,
-                experience: newExperience
-            };
-            localStorage.setItem("teachers", JSON.stringify(teachers));
-            renderTable();
-            alert("Teacher updated successfully!");
-        } else {
-            alert("Edit cancelled or invalid input.");
-        }
-    }
-
-    renderTable();
+  renderTable();
 </script>
+
 </html>

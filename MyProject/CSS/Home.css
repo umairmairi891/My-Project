@@ -1,7 +1,8 @@
-.mainside{
+.mainside {
     text-decoration: none;
     list-style: none;
 }
+
 .sidebar {
     height: 100vh;
     width: 250px;
@@ -13,17 +14,78 @@
     z-index: 1000;
     display: none;
 }
-p{
+.navbar-nav .nav-link{
+    color: #f8f9fa;
+}
+p {
     font-family: 'Times New Roman', Times, serif;
 }
+footer p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navbar {
+    background-color: rgb(22, 22, 92);
+    color: wheat;
+}
+ul li{
+    font-family:  serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer {
+    background-color: #00274d;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.slider_section {
+    background: url('https://media.istockphoto.com/id/115867277/photo/academy.jpg?s=612x612&w=0&k=20&c=L4Z_B4gcGgQG6TrY6BQVsQ-fjJJ441Ef8zlEZWqmbSM=') no-repeat center ;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    object-fit: cover;
+    /* filter: brightness(50%); */
+}
+
+.slider_section h1 .slider-content {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: white;
+    font-size: 48px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
 .content {
-    margin-right: 250px; /* Leave space for sidebar */
+    margin-right: 250px;
+    /* Leave space for sidebar */
     margin-top: 100px;
 }
-.content img{
+
+.content img {
     width: 100%;
     height: 50%;
 }
+
 .card a {
     color: inherit;
     text-decoration: none;
@@ -33,78 +95,92 @@ p{
 .card:hover {
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-.animate__animated.animate__bounceIn{
+
+.animate__animated.animate__bounceIn {
     animation-duration: 2s;
 }
-a{
+
+a {
     text-decoration: none;
 }
-footer{
+
+footer {
     margin-bottom: 2px;
     text-align: center;
 }
-.border{
+
+.border {
     border-radius: 1rem;
     border: 9px solid rgb(31, 30, 29);
 }
-.color{
+
+.color {
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     color: blueviolet;
 }
-.active{
+
+.active {
     font-size: 20px;
-    color: blue;
+    color: #00274d;
 }
 
-.content img{
+.content img {
     width: 40rem;
     border-radius: 10px;
 }
-.img:hover{
-    
+
+.img:hover {
+
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+
 .slider-container {
     overflow: hidden;
     white-space: nowrap;
     background-color: transparent;
-    /* border: 1px solid #dee2e6; */
+    color: wheat;
     padding: 10px 0;
     position: relative;
     cursor: pointer;
-  }
+}
 
-  .slider-text {
+.slider-text {
     display: inline-block;
     padding-left: 100%;
     animation: slideText 20s linear infinite;
-  }
-.slider{
+}
+
+.slider {
     display: inline-block;
     margin-right: 4rem;
 }
-.slider-container:hover .slider-text{
+
+.slider-container:hover .slider-text {
     animation-play-state: paused;
 }
-  @keyframes slideText {
+
+@keyframes slideText {
     from {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
+
     to {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
+}
+
 @media (max-width:500px) {
-    .sidebar{
+    .sidebar {
         width: 100%;
     }
-   .content img{
-    margin-top: 1rem;
+
+    .content img {
+        margin-top: 1rem;
         width: 30rem;
         height: 10rem;
         text-align: center;
@@ -112,8 +188,9 @@ footer{
         overflow: hidden;
     }
 }
-@media (max-width:700px){
-    .content img{
+
+@media (max-width:700px) {
+    .content img {
         width: 30rem;
     }
 }

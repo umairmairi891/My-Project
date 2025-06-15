@@ -1,82 +1,92 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
-    <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
-    <style>
-    img{
-        width: 25px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
+  <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
+  <link rel="stylesheet" href="/MyProject/HTML/index.html">
+  <style>
+    img {
+      width: 25px;
     }
-</style>
+  </style>
 </head>
+
 <body>
-    
-    
-    <div class="container bg-light py-5 px-4 rounded">
-    
-        <div class="row  d-flex   mb-3">
-          <div class="col-1 mt-2">
-            <a href="/MyProject/HTML/index.html"> <img src="/MyProject/Images/arrow-left-circle-fill.svg" alt="" ></a>
-         </div>
-          <div class="col-10  text-center">
-            <h2>Teachers Section</h2>
-          </div>
-        </div>
-      
-        <div class="row mb-4">
-          <div class="col-md-10 col-lg-8 mx-auto text-center">
-            <p>This is our Teacher Controling Section. </p>
-          </div>
-        </div>
-      
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6 bg-success text-white p-4 rounded shadow">
-            <form id="teacherForm">
-              <div class="mb-3 text-center">
-                <label for="className" class="form-label">Name</label>
-                <input type="text" class="form-control" id="Name" placeholder="Enter Name" required>
-              </div>
-      
-              <div class="mb-3 text-center">
-                <label for="subject" class="form-label">Education</label>
-                <input type="text" class="form-control" id="Education" placeholder="Enter Education" required>
-              </div>
-      
-              <div class="mb-4 text-center">
-                <label for="teacher" class="form-label">Experience</label>
-                <input type="text" class="form-control" id="Experience" placeholder="Enter Experience" required>
-              </div>
-      
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary w-40">Add New Teacher</button>
-              </div>
-            </form>
-          </div>
-          <div class="text-center w-10 mt-3">
-            <a href="TeachersTable.html" class="btn btn-secondary ">Go to Teachers  Table</a>
-          </div>
-        </div>
+
+
+  <div class="container bg-light py-5 px-4 rounded">
+
+    <div class="row  d-flex   mb-3">
+      <div class="col-1 mt-2">
+        <a href="/MyProject/HTML/index.html"> <img src="/MyProject/Images/arrow-left-circle-fill.svg" alt=""></a>
       </div>
+      <div class="col-10  text-center">
+        <h2>Teachers Section</h2>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-10 col-lg-8 mx-auto text-center">
+        <p>This is our Teacher Controling Section. </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 bg-success text-white p-4 rounded shadow">
+        <form id="teacherForm">
+          <div class="mb-3 text-center">
+            <label for="className" class="form-label">Name</label>
+            <input type="text" class="form-control" id="Name" placeholder="Enter Name" required>
+          </div>
+
+          <div class="mb-3 text-center">
+            <label for="subject" class="form-label">Education</label>
+            <input type="text" class="form-control" id="Education" placeholder="Enter Education" required>
+          </div>
+
+          <div class="mb-4 text-center">
+            <label for="teacher" class="form-label">Experience</label>
+            <input type="text" class="form-control" id="Experience" placeholder="Enter Experience" required>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary w-40">Add New Teacher</button>
+          </div>
+        </form>
+      </div>
+      <div class="text-center w-10 mt-3">
+        <a href="TeachersTable.html" class="btn btn-secondary ">Go to Teachers Table</a>
+      </div>
+    </div>
+  </div>
 </body>
 <script>
   document.getElementById("teacherForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const teacher = {
-            name: document.getElementById("Name").value,
-            education: document.getElementById("Education").value,
-            experience: document.getElementById("Experience").value
-        };
+    e.preventDefault();
+    const teacher = {
+      name: document.getElementById("Name").value,
+      education: document.getElementById("Education").value,
+      experience: document.getElementById("Experience").value
+    };
 
-        let teachers = JSON.parse(localStorage.getItem("teachers")) || [];
-        teachers.push(teacher);
-        localStorage.setItem("teachers", JSON.stringify(teachers));
+    let teachers = JSON.parse(localStorage.getItem("teachers")) || [];
+    teachers.push(teacher);
+    localStorage.setItem("teachers", JSON.stringify(teachers));
 
-        alert("Teacher added successfully!");
-        this.reset();
-    });
+    alert("Teacher added successfully!");
+    const countDisplay = document.getElementById("teacherCount");
+    if (countDisplay) {
+      countDisplay.textContent = teachers.length;
+    }
+    console.log(teachers.length);
+    
+    this.reset();
+  });
 </script>
+
 </html>

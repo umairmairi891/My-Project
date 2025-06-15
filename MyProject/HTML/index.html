@@ -9,29 +9,33 @@
     <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
     <link rel="stylesheet" href="/MyProject/CSS/Home.css">
     <link rel="stylesheet" href="/MyProject/node_modules/animate.css/animate.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav class="navbar  navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar   navbar-expand-lg   fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand  me-5" href="#"> <img src="/MyProject/Images/167707.png"
-                    style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">S<span
-                    class="text-primary">M</span>S</a>
+            <a class="navbar-brand  me-5 text-white fw-bold" href="#"> <img src="/MyProject/Images/167707.png"
+                    style="width: 25px;height: 25px; margin-bottom: 10px; margin-right: 5px;" alt="">
+                S<span class="text-white">M</span>S
+            </a>
             <button onclick="showbar()" class="navbar-toggler me-5" type="button" data-bs-toggle="collapse"
                 data-bs-target="#mainNavbar">
                 <span style="margin-left: auto;" class="navbar-toggler-icon "></span>
             </button>
-            <div class="collapse navbar-collapse animate__animated animate__fadeIn d-4" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item me-5"><a class="nav-link  active" href="#">Home</a></li>
+            <div class="collapse navbar-collapse animate__animated animate__fadeIn  d-4" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center ">
+                    <li class="nav-item me-5"><a class="nav-link  " href="#">Home</a></li>
                     <li class="nav-item me-5"><a class="nav-link " href="About.html">About</a></li>
                     <li class="nav-item me-5"><a class="nav-link " href="Contact.html">Contact</a></li>
                     <li class="nav-item me-5"><a class="nav-link " href="News.html">News</a></li>
+                    <li class="nav-item d-none d-lg-block  ">
+                        <form action="/MY-PROJECT/php/logout.php" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-outline-primary  text-white">Logout</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -50,115 +54,117 @@
         </ul>
     </div>
 
-    <div class="content h-100 container animate__animated animate__fadeIn  mt-7 px-4">
-        <div class="row mb-4 ">
-            <div class="col ">
-                <div class="fw-bold">
-                    <div class="slider-container">
-                        <div class="slider-text fs-5 text-dark">
-                             <span class="slider">Welcome to our Student Portal!</span>       
-                             <span class="slider"> Admissions open for 2025! |</span>     
-                             <span class="slider">  New scholarshipsavailable!</span>   
-                             <span class="slider">  Register Now!</span>
+    <div class="container " style="margin-top: 6rem;">
+        <div class="slider_section mt-5 rounde d">
+            <div class="row  slider-content ">
+                <div class="col ">
+                    <div class="fw-bold">
+                        <div class="slider-container bg-success">
+                            <div class="slider-text fs-5  text-dark">
+                                <span class="slider">Welcome to our Student Portal!</span>
+                                <span class="slider"> Admissions open for 2025! |</span>
+                                <span class="slider"> New scholarshipsavailable!</span>
+                                <span class="slider"> Register Now!</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-12 mb-3 position-relative">
-                <!-- Image with reduced opacity and controlled height -->
-                <img src="/MyProject/Images/SchoolPage.jpg" alt="" class="img-fluid w-100"
-                    style="opacity: 0.2; height: 70vh; object-fit: cover;">
-
-                <!-- Centered Text overlay INSIDE the image -->
-                <div
-                    class="position-absolute text-capitalize top-50 start-0 translate-middle-y text-center text-dark px-3">
-                    <h2 class="mt-2 fw-bold ">Our Mission</h2>
-                    <p
-                        class="lead fs-4 fw-normal d-flex-inline flex-column text-bold align-items-center  user-select-all">
-                        To revolutionize the educational ecosystem by providing smart, digital solutions that
-                        enhance
-                        communication,
-                        increase efficiency, and improve the overall learning experience.
-                    </p>
-
-                    <h3 class="mt-4 fw-bold">Our Goals</h3>
-                    <p class="lead fs-4  user-select-all">
-                        To be a leading provider of digital solutions in education by empowering institutions to
-                        operate
-                        more efficiently
-                        and effectively through technology.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="row m-auto">
-            <div class="col-md-4 mb-3">
-                <a href="/MyProject/HTML/StudentTable.html">
-                    <div class="card bg-danger text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Students</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 mb-3">
-                <a href="TeachersTable.html">
-                    <div class="card bg-success text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Teachers</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 mb-3">
-                <a href="/MyProject/HTML/ClassesTable.html">
-                    <div class="card bg-primary text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Classes</h5>
-                        </div>
-                    </div>
-                </a>
             </div>
 
         </div>
     </div>
-    <footer class="bg-dark  text-white ">
-        <div class="container py-3">
-            <div class="row text-center">
-                <div class="col-12 mb-2">
-                    <p class="mb-0">Copyright &copy; 2025</p>
-                    <small>All Rights Reserved</small>
-                </div>
 
-                <div class="col-12 ">
-                    <div class="d-flex justify-content-center align-items-center gap-3 mt-2">
-                        <a href="https://www.google.com" target="_blank">
-                            <img src="/MyProject/Images/google-logo-icon.png" alt="Google" width="30" class="rounded">
-                        </a>
-                        <a href="https://www.facebook.com" target="_blank">
-                            <img src="/MyProject/Images/facebook-logo-facebook-icon-transparent-free-png.png"
-                                alt="Facebook" width="40" height="40">
-                        </a>
-                        <a href="https://www.youtube.com" target="_blank">
-                            <img src="/MyProject/Images/youtube-logo-youtube-icon-transparent-free-png.png"
-                                alt="YouTube" width="40" height="40">
-                        </a>
-                        <a href="https://www.twitter.com" target="_blank">
-                            <img src="/MyProject/Images/Twitter-Logo.png" alt="Twitter" width="30" class="rounded">
-                        </a>
+    <div class="container py-5">
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <a href="/MyProject/HTML/StudentTable.html" style="text-decoration: none;">
+                    <div class="card p-3 shadow h-100">
+                        <div class="card-body">
+                            <i class="fas fa-user-graduate text-center"></i>
+                            <h2 class="card-title">Student</h2>
+                            <p class="card-text lead">Manage Student Information and Record</p>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+
+                <a href="/MyProject/HTML/ClassesTable.html" style="text-decoration: none;">
+                    <div class="card p-3 shadow h-100">
+                        <div class="card-body">
+                            <i class="fas  fa-chalkboard-teacher "></i>
+                            <h2 class="card-title">Classes</h2>
+                            <p class="card-text lead">Organize & assign classes to Teachers</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/MyProject/HTML/Feemanagment.html" style="text-decoration: none;">
+                    <div class="card p-3 shadow h-100 ">
+                        <div class="card-body">
+                            <i class="fa fa-dollar-sign "></i>
+                            <h2 class="card-title">Fee Management</h2>
+                            <p class="card-text lead">Handle fee Collection and Payment</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/MyProject/HTML/TeachersTable.html" style="text-decoration: none;">
+                    <div class="card p-4 shadow h-100">
+                        <div class="card-body">
+                            <i class="fa fa-users text-dark"></i>
+                            <h2 class="card-title">Teachers</h2>
+                            <p class="card-text lead">Manage Teacher Schedules and Classes</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+    </div>
+
+
+    <div class="container mb-4 rounded ">
+        <div class="row align-items-center shadow-lg">
+            <div class="col-md-6">
+                <img class="img-fluid rounded" src="/MyProject/Images/academic-1.jpg" alt="">
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center fw-bold">Our Mission</h3>
+                <p class="lead">To revolutionize the educational ecosystem by providing smart, digital solutions that
+                    enhance communication,increase efficiency, and improve the overall learning experience.</p>
+                <h3 class="text-center fw-bold">Our Goals</h3>
+                <p class="lead">
+                    To be a leading provider of digital solutions in education by empowering institutions to operate
+                    more efficiently and effectively through technology.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer text-center text-white navbar py-4 justify-content-center d-block">
+        <p>Follow Us On:</p>
+        <div class="text-center mb-2">
+            <a href="https://twitter.com" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="https://facebook.com" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="https://google.com" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+            <a href="https://instagram.com" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://github.com/umairmairi891?tab=repositories" class="text-white"><i
+                    class="fab fa-github fa-lg"></i></a>
+        </div>
+        <p class="mb-0 lead t">&copy; 2025 School Management System</p>
+        <p class="mb-0 lead">All Right Reserved</p>
     </footer>
-    </div>
+
 </body>
 <script src="/MyProject/JavaScript/Home.js">
+
+</script>
+<script src="/MyProject/JavaScript/Student.js">
+
+
+
+
 
 </script>
 
