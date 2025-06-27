@@ -35,8 +35,8 @@ window.onload = function () {
         tableBody.appendChild(row);
     });
 
-
-    document.querySelectorAll('.delete-btn').forEach(button => {
+    const deleteButton = document.querySelectorAll('.delete-btn')
+    deleteButton.forEach(button => {
         button.addEventListener('click', function () {
             const index = this.getAttribute('data-index');
             students.splice(index, 1);
@@ -49,7 +49,8 @@ window.onload = function () {
         });
     });
 
-    document.querySelectorAll('.edit-btn').forEach(button => {
+    const editButton = document.querySelectorAll('.edit-btn')
+    editButton.forEach(button => {
         button.addEventListener('click', function () {
             const index = this.getAttribute('data-index');
             const student = students[index];
@@ -75,7 +76,9 @@ window.onload = function () {
         });
     });
     let currentStudentIndex = null;
-    document.querySelectorAll('.details-btn').forEach(button => {
+    const detailsButtton = document.querySelectorAll('.details-btn')
+
+    detailsButtton.forEach(button => {
         button.addEventListener('click', function () {
             currentStudentIndex = this.getAttribute('data-index');
             const student = students[currentStudentIndex];
@@ -135,10 +138,10 @@ function showResult(index) {
     <p><strong>Name:</strong> ${student.fname} ${student.sname}</p>
     <p><strong>Class:</strong> ${student.className}</p>
     <hr>
-    <p><strong>First Term:</strong> ${student.marksfirst || "N/A"}</p>
-    <p><strong>Mid Term:</strong> ${student.markssecond || "N/A"}</p>
-    <p><strong>Third Term:</strong> ${student.marksthird || "N/A"}</p>
-    <p><strong>Final Term:</strong> ${student.marksfinal || "N/A"}</p>
+    <p><strong>First Term:</strong> ${student.marksfirst || "Not yet Entered"}</p>
+    <p><strong>Mid Term:</strong> ${student.markssecond || "Not yet Entered"}</p>
+    <p><strong>Third Term:</strong> ${student.marksthird || "Not yet Entered"}</p>
+    <p><strong>Final Term:</strong> ${student.marksfinal || "Not yet Entered"}</p>
   `;
 
     document.getElementById("resultContent").innerHTML = resultContent;
@@ -149,26 +152,27 @@ function showResult(index) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("resultForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const index = document.getElementById("resultStudentIndex").value;
-    const students = JSON.parse(localStorage.getItem("students")) || [];
+    const resultForm = document.getElementById('resultForm');
+    resultForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const index = document.getElementById("resultStudentIndex").value;
+        const students = JSON.parse(localStorage.getItem("students")) || [];
 
-    students[index].marksfirst = document.getElementById("marksfirst").value;
-    students[index].markssecond = document.getElementById("markssecond").value;
-    students[index].marksthird = document.getElementById("marksthird").value;
-    students[index].marksfinal = document.getElementById("marksfinal").value;
+        students[index].marksfirst = document.getElementById("marksfirst").value;
+        students[index].markssecond = document.getElementById("markssecond").value;
+        students[index].marksthird = document.getElementById("marksthird").value;
+        students[index].marksfinal = document.getElementById("marksfinal").value;
 
-    localStorage.setItem("students", JSON.stringify(students));
+        localStorage.setItem("students", JSON.stringify(students));
 
-    alert("Result saved successfully!");
-    bootstrap.Modal.getInstance(document.getElementById('enterResultModal')).hide();
-    location.reload();
-  });
+        alert("Result saved successfully!");
+        bootstrap.Modal.getInstance(document.getElementById('enterResultModal')).hide();
+        
+    });
 });
 
-
-document.getElementById('studentForm').addEventListener('submit', function (e) {
+const studentForm = document.getElementById('studentForm')
+studentForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const student = {

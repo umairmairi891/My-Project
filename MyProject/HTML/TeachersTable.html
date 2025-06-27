@@ -71,9 +71,9 @@
                     <td>${teacher.education}</td>
                     <td>${teacher.experience}</td>
                     <td>
-                        <button class="btn btn-warning btn-sm me-md-4  " onclick="editTeacher(${index})">Edit</button>
-                        <button class="btn btn-danger btn-sm mt-1 me-md-4 text-center" onclick="deleteTeacher(${index})">Delete</button>
-                        <button data-bs-toggle='button' class="btn btn-danger  bg-danger btn-sm mt-1 me-md-4 " onclick="toggleSchedule('${teacher.name}')">schedule</button>
+                        <button class="btn btn-warning btn-sm me-md-1 me-4  " onclick="editTeacher(${index})">Edit</button>
+                        <button class="btn btn-danger btn-sm mt-1 mt-md-0 me-md-1 me-4 text-center" onclick="deleteTeacher(${index})">Delete</button>
+                        <button data-bs-toggle='button' class="btn btn-danger  bg-danger btn-sm mt-1 mt-md-0 me-md-1 me-4 " onclick="toggleSchedule('${teacher.name}')">schedule</button>
                      
                     </td>
                 </tr>`;
@@ -140,7 +140,7 @@ function toggleSchedule(teacherName) {
       { day: "Monday", time: "9:00 AM", subject: "Mathematics", class: "9A" },
       { day: "Wednesday", time: "11:00 AM", subject: "Geometry", class: "10B" }
     ],
-    "Ali": [
+    "Usman": [
       { day: "Tuesday", time: "10:00 AM", subject: "English Literature", class: "9B" },
       { day: "Thursday", time: "2:00 PM", subject: "Writing Skills", class: "10A" }
     ],

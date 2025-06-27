@@ -66,5 +66,44 @@
     </div>
   </div>
 </body>
-<script src="/MyProject/JavaScript/Class.js"></script>
+<script src="/MyProject/JavaScript/Class.js">
+  document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent page reload
+
+    const className = document.getElementById('className').value.trim();
+    const room = document.getElementById('room').value.trim();
+    const teacher = document.getElementById('teacher').value.trim();
+
+    // Create object to send
+    const classData = {
+      className: className,
+      room: room,
+      teacher: teacher
+    };
+
+    // Send to MockAPI
+    fetch('https://6854f57b6a6ef0ed6630a63b.mockapi.io/school', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(classData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Class added successfully!');
+      console.log('Response:', data);
+      form.reset(); // Clear form
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Failed to add class. Please try again.');
+    });
+  });
+});
+
+</script>
 </html>

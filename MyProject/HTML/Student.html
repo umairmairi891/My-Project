@@ -1,45 +1,53 @@
-<!-- Student.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- ✅ Viewport meta added -->
   <title>Student Form</title>
   <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.css">
-  <link rel="stylesheet" href="/MyProject/BootStrap/bootstrap.rtl.css">
+  <!-- If you're not using RTL layout, remove the line below -->
+  <link rel="stylesheet" href="/MY-PROJECT/BootStrap/bootstrap.rtl.css">
+
   <style>
-    body{
+    body {
       margin: 0;
       padding: 0;
     }
-    @media (max-width:500px) {
-    form input{
-      padding: 10px;
-    }
+    h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body class="bg-light">
-  <div class="container col-lg-4 py-4 ">
-    <h2 class="text-center mb-4">Add New Student</h2>
-    <form id="studentForm" class="text-center card   p-5">
-      <input type="text" id="fname" placeholder="First Name" class="form-control  mb-4" required>
-      <input type="text" id="sname" placeholder="Second Name" class="form-control mb-4" required>
-      <input type="number" id="age" placeholder="Age" class="form-control mb-4" required>
-      <input type="text" id="class" placeholder="Class" class="form-control mb-4" required>
-      <input type="email" id="email" placeholder="Email" class="form-control mb-4" required>
-      <input type="text" id="marks" placeholder="Marks" class="form-control mb-4">
-      <input type="text" id="attendence" placeholder="Attendance" class="form-control mb-4">
-      <input type="text" id="grade" placeholder="Grade" class="form-control mb-4">
-      <button type="submit" class="btn btn-primary ">Add Student</button>
-    </form>
-    <div class="text-center w-10 mt-3">
-      <a href="StudentTable.html" class="btn btn-success ">Go to Student Table</a>
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <h2 class="text-center mb-4">Add New Student</h2>
+
+        <form id="studentForm" class="card p-4 shadow">
+          <input type="text" id="fname" placeholder="First Name" class="form-control mb-3" required>
+          <input type="text" id="sname" placeholder="Second Name" class="form-control mb-3" required>
+          <input type="number" id="age" placeholder="Age" class="form-control mb-3" required>
+          <input type="text" id="class" placeholder="Class" class="form-control mb-3" required>
+          <input type="email" id="email" placeholder="Email" class="form-control mb-3" required>
+          <input type="text" id="marks" placeholder="Marks" class="form-control mb-3" required>
+          <input type="text" id="attendence" placeholder="Attendance" class="form-control mb-3" required>
+          <input type="text" id="grade" placeholder="Grade" class="form-control mb-3" required>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Add Student</button>
+          </div>
+        </form>
+
+        <div class="text-center mt-3">
+          <a href="StudentTable.html" class="btn btn-success">Go to Student Table</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <script src="/MyProject/JavaScript/Student.js">
-    
-  </script>
+  <script src="/MY-PROJECT/JavaScript/Student.js"></script>
 </body>
 </html>

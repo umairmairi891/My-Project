@@ -26,9 +26,7 @@
     z-index: 1000;
     display: none;
 }
-img{
-    opacity: 0.5 ;
-}
+
 .img{
 position: relative;
 }
@@ -48,8 +46,6 @@ position: relative;
       border-radius: 8px;
     }
     .news-img:hover{
-      
-    
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -62,6 +58,23 @@ position: relative;
       padding: 20px;
       margin-bottom: 40px;
     }
+
+  .autoshow{
+    animation: autoshowAnimation both;
+    animation-timeline: view(70% 5%);
+  }
+  @keyframes autoshowAnimation{
+    from{
+      opacity: 0;
+      transform: translateY(200px) scale(0.5);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+
 @media (max-width:500px) {
     .sidebar{
         width: 100%;
@@ -145,7 +158,7 @@ position: relative;
           </div>
         </div>
       
-        <div class="row  news-item">
+        <div class="row  news-item ">
           <div class="col-md-6 order-md-2">
             <img src="/MyProject/Images/7e418ba4bb7340b5b79d3004e0918e2e.webp" alt="News Image 2" class="news-img" style=" height: 100%;">
           </div>
@@ -158,7 +171,7 @@ position: relative;
           </div>
         </div>
       
-        <div class="row news-item">
+        <div class="row news-item autoshow">
           <div class="col-md-6">
             <img src="/MyProject/Images/academic-1.jpg" alt="News Image 3" class="news-img">
           </div>
@@ -169,7 +182,7 @@ position: relative;
           </div>
         </div>
       
-        <div class="row news-item">
+        <div class="row news-item autoshow">
           <div class="col-md-6 order-md-2">
             <img src="/MyProject/Images/images.jpeg" alt="News Image 4" class="news-img">
           </div>
@@ -180,7 +193,7 @@ position: relative;
           </div>
         </div>
       
-        <div class="row news-item">
+        <div class="row news-item autoshow">
           <div class="col-md-6 ">
             <img src="/MyProject/Images/playimg.jpg" alt="News Image 5" class="news-img">
           </div>
@@ -191,7 +204,7 @@ position: relative;
           </div>
         </div>
       
-        <div class="row news-item">
+        <div class="row news-item autoshow">
           <div class="col-md-6 order-md-2">
             <img src="/MyProject/Images/studyimg.jpg" alt="News Image 6" class="news-img">
           </div>

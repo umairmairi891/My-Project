@@ -14,7 +14,6 @@ window.onload = function() {
         <button class="btn btn-sm btn-info moreBtn">More Details</button>
         <button class="btn btn-sm btn-warning editBtn">Edit</button>
         <button class="btn btn-sm btn-danger deleteBtn">Delete</button>
-        <button class="btn btn-sm btn-danger deleteBtn">Delete</button>
       </td>
     `;
 
@@ -128,3 +127,50 @@ function showClassDetails(className) {
 function closeSidebar() {
   document.getElementById('classDetailsSidebar').style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form');
+
+  if (!form) {
+    console.error("Form not found in DOM");
+    return;
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log("Form submission intercepted");
+
+    const className = document.getElementById('className').value.trim();
+    const room = document.getElementById('room').value.trim();
+    const teacher = document.getElementById('teacher').value.trim();
+
+    const classData = {
+      className,
+      room,
+      teacher
+    };
+
+    console.log("Sending data:", classData);
+
+    fetch('https://6854f57b6a6ef0ed6630a63b.mockapi.io/school', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(classData)
+    })
+    .then(response => {
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.json();
+    })
+    .then(data => {
+      console.log("Success:", data);
+      alert('Class added successfully!');
+      form.reset();
+    })
+    .catch(error => {
+      console.error("Error sending data:", error);
+      alert('Error adding class');
+    });
+  });
+});
